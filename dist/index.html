@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#101a31" />
+    <meta name="description" content="FlowPilot AI — case independente de Douglas Paiva. Explore uma demonstração funcional de triagem de solicitações, classificação por machine learning e aprovação humana com dados fictícios." />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <title>FlowPilot AI — Intelligent Workflow Studio | Douglas Paiva</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="FlowPilot AI — início">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>flowpilot<span>AI</span></strong><small>INTELLIGENT OPERATIONS</small></span>
+      </a>
+      <div class="sidebar-section-label">WORKSPACE</div>
+      <nav class="side-nav">
+        <a class="nav-link active" href="#inicio" data-nav="inicio"><span class="nav-icon">◫</span> Visão geral <span class="nav-caret">↗</span></a>
+        <a class="nav-link" href="#laboratorio" data-nav="laboratorio"><span class="nav-icon">✳</span> Laboratório <span class="nav-caret">↗</span></a>
+        <a class="nav-link" href="#solicitacoes" data-nav="solicitacoes"><span class="nav-icon">▤</span> Solicitações <span id="sidebar-count" class="nav-counter">0</span></a>
+        <a class="nav-link" href="#insights" data-nav="insights"><span class="nav-icon">◷</span> Indicadores</a>
+      </nav>
+      <div class="sidebar-section-label secondary-label">DOCUMENTAÇÃO</div>
+      <nav class="side-nav">
+        <a class="nav-link" href="#arquitetura" data-nav="arquitetura"><span class="nav-icon">⌘</span> Arquitetura</a>
+        <a class="nav-link" href="#sobre" data-nav="sobre"><span class="nav-icon">◎</span> Sobre o projeto</a>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="model-card">
+        <div class="model-indicator"><span class="pulse-dot"></span> ENGINE ONLINE</div>
+        <strong>Classificador local v1</strong>
+        <p>Aprendizado de máquina executado diretamente neste navegador.</p>
+        <div class="model-rail"><span></span></div>
+        <small>SEM ENVIO DE DADOS EXTERNOS</small>
+      </div>
+      <div class="sidebar-profile">
+        <div class="avatar">DP</div>
+        <div><strong>Douglas Paiva</strong><small>Projeto de portfólio</small></div>
+        <span class="profile-dot" aria-hidden="true"></span>
+      </div>
+    </aside>
+
+    <div class="main-column" id="inicio">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>PORTFÓLIO</span><span class="crumb-separator">/</span><strong>VISÃO GERAL</strong></div>
+        <div class="top-actions"><span class="sandbox-pill"><span class="status-dot"></span> Sandbox demonstrativo</span><a class="top-help" href="#sobre">Sobre este projeto <span>↗</span></a></div>
+      </header>
+
+      <main class="content">
+        <div class="eyebrow page-eyebrow"><span class="eyebrow-line"></span> PORTFOLIO PROJECT · AI BUILDER</div>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <div class="hero-kicker"><span class="sparkle">✳</span> WORKFLOW INTELLIGENCE / 01</div>
+            <h1 id="hero-title">Do caos operacional à<br /><em>decisão inteligente.</em></h1>
+            <p>Solicitações chegam em texto livre. O FlowPilot demonstra como classificar cada pedido, sugerir a equipe responsável e registrar uma decisão humana — tudo com dados fictícios.</p>
+            <div class="hero-actions"><a class="btn hero-primary" href="#laboratorio">Testar o laboratório <span aria-hidden="true">↗</span></a><a class="btn hero-secondary" href="#arquitetura">Explorar arquitetura <span aria-hidden="true">→</span></a></div>
+          </div>
+          <div class="hero-graphic" aria-hidden="true">
+            <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+            <div class="orbit-dot orbit-dot-a"></div><div class="orbit-dot orbit-dot-b"></div>
+            <div class="core-node"><span class="core-spark">✳</span><small>FLOWPILOT</small><strong>AI</strong><span class="core-caption">ANALYSIS ENGINE</span></div>
+            <div class="mini-node mini-left">INPUT <span>●</span></div><div class="mini-node mini-right"><span>●</span> ROUTE</div>
+          </div>
+          <div class="hero-foot"><span>01 / CLASSIFICAR</span><i></i><span>02 / VALIDAR</span><i></i><span>03 / ENCAMINHAR</span></div>
+        </section>
+
+        <section class="metrics" aria-label="Indicadores do ambiente demonstrativo">
+          <article class="metric-card"><div class="metric-head">SOLICITAÇÕES <span class="metric-symbol">↗</span></div><div class="metric-main"><strong id="metric-total">0</strong><span class="metric-trend">neste navegador</span></div><div class="metric-sub">Inclui amostras sintéticas</div></article>
+          <article class="metric-card"><div class="metric-head">AGUARDANDO REVISÃO <span class="metric-symbol amber">◌</span></div><div class="metric-main"><strong id="metric-pending">0</strong><span class="mini-chip amber-chip">Humano no controle</span></div><div class="metric-sub">Fila para validação manual</div></article>
+          <article class="metric-card"><div class="metric-head">DESTINOS APROVADOS <span class="metric-symbol green">✓</span></div><div class="metric-main"><strong id="metric-approved">0</strong><span class="mini-chip green-chip">Revisados</span></div><div class="metric-sub">Simulação, sem envio externo</div></article>
+          <article class="metric-card"><div class="metric-head">ÁREAS DE DESTINO <span class="metric-symbol purple">◈</span></div><div class="metric-main"><strong id="metric-categories">5</strong><span class="metric-trend">regras cadastradas</span></div><div class="metric-sub">Operação, TI, RH, financeiro e comercial</div></article>
+        </section>
+
+        <section class="section case-section" id="desafio" aria-labelledby="case-heading">
+          <div class="section-heading"><div><div class="eyebrow">00 — O PROBLEMA</div><h2 id="case-heading">Uma decisão pequena, repetida muitas vezes.</h2><p>Uma demonstração de produto começa com um problema claro — não com um algoritmo.</p></div><span class="section-tag">CASE STUDY · DADOS FICTÍCIOS</span></div>
+          <div class="case-grid">
+            <article class="case-card"><span class="case-num">01 / DESAFIO</span><h3>Solicitações sem destino claro</h3><p>Quando pedidos chegam em texto livre, a triagem exige leitura, interpretação e uma decisão sobre quem deve atender.</p></article>
+            <article class="case-card"><span class="case-num">02 / PROPOSTA</span><h3>Classificar e sugerir</h3><p>Um classificador de machine learning sugere uma entre cinco áreas; regras explícitas tratam da prioridade.</p></article>
+            <article class="case-card"><span class="case-num">03 / CONTROLE</span><h3>Uma pessoa decide</h3><p>O operador revisa a sugestão, corrige o destino e registra a aprovação ou rejeição antes de qualquer ação externa.</p></article>
+          </div>
+          <div class="case-disclaimer"><strong>O que este projeto comprova?</strong> O funcionamento do fluxo demonstrativo e sua interface. <strong>O que ainda não comprova?</strong> Redução de tempo, precisão em dados reais ou integração operacional. Esses resultados exigem um piloto e métricas.</div>
+        </section>
+
+        <section class="section" id="laboratorio" aria-labelledby="lab-heading">
+          <div class="section-heading"><div><div class="eyebrow">01 — EXPERIENCE LAB</div><h2 id="lab-heading">Laboratório de decisões <span class="heading-accent">↗</span></h2><p>Experimente um fluxo completo com dados fictícios. A classificação é calculada no seu dispositivo.</p></div><span class="section-tag">INTERATIVO · ML LOCAL</span></div>
+          <div class="lab-grid">
+            <article class="panel input-panel">
+              <div class="panel-heading"><span class="round-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><div><h3>Nova solicitação</h3><p>Informe o contexto para gerar uma sugestão.</p></div></div>
+              <form id="request-form" novalidate>
+                <label for="req-title">Título da solicitação <span class="required">*</span></label>
+                <input id="req-title" name="title" maxlength="90" required placeholder="Ex.: Não consigo acessar o painel" autocomplete="off" />
+                <div class="field-row"><div><label for="req-origin">Origem</label><select id="req-origin" name="origin"><option>Operação interna</option><option>Equipe de suporte</option><option>Área de negócios</option><option>Administrativo</option></select></div><div><label for="req-urgency">Urgência informada</label><select id="req-urgency" name="urgency"><option value="normal">Normal</option><option value="alta">Alta</option><option value="critica">Crítica</option></select></div></div>
+                <label for="req-description">Descrição do problema <span class="required">*</span></label>
+                <textarea id="req-description" name="description" rows="5" maxlength="900" required placeholder="Descreva o que aconteceu, o que precisa ser feito e qual é o impacto na operação..."></textarea>
+                <div class="field-counter"><span>Não informe dados pessoais ou confidenciais.</span><span id="desc-length">0 / 900</span></div>
+                <div class="preset-head">EXPERIMENTE UM CENÁRIO <span>↓</span></div>
+                <div class="preset-list"><button type="button" class="preset" data-preset="acesso">Acesso ao sistema <span>↗</span></button><button type="button" class="preset" data-preset="reembolso">Reembolso <span>↗</span></button><button type="button" class="preset" data-preset="logistica">Atraso na entrega <span>↗</span></button></div>
+                <button type="submit" class="btn primary-btn" id="analyze-btn"><span class="btn-spark">✳</span> Analisar solicitação <span class="btn-arrow">→</span></button>
+              </form>
+            </article>
+            <article class="panel output-panel" aria-live="polite">
+              <div class="panel-heading output-heading"><span class="round-icon violet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.9 6.1L20 11l-6.1 1.9L12 19l-1.9-6.1L4 11l6.1-1.9L12 3ZM19 17l.7 1.3L21 19l-1.3.7L19 21l-.7-1.3L17 19l1.3-.7L19 17Z"/></svg></span><div><h3>Inteligência de roteamento</h3><p>Saída do modelo + simulação de destino.</p></div><span class="analysis-status" id="analysis-status">AGUARDANDO</span></div>
+              <div class="analysis-empty" id="analysis-empty"><div class="empty-orbit"><span>✳</span></div><strong>Pronto para analisar</strong><p>Preencha uma solicitação ou escolha um exemplo. A recomendação aparecerá aqui para revisão.</p><div class="empty-steps"><span>ENTRADA</span><span>→</span><span>MODELO</span><span>→</span><span>HUMANO</span></div></div>
+              <div id="analysis-result" class="analysis-result" hidden>
+                <div class="result-top"><div><span class="micro-label">DESTINO SUGERIDO</span><h3 id="result-team">—</h3></div><span class="result-confidence"><span id="result-confidence">—</span><small>índice relativo do modelo*</small></span></div>
+                <div class="result-divider"></div>
+                <div class="result-pills"><span id="result-priority" class="result-pill">Prioridade</span><span id="result-state" class="result-pill review">Revisão humana necessária</span></div>
+                <div class="result-explain"><span class="micro-label">POR QUE ESTA SUGESTÃO?</span><p id="result-reason">—</p></div>
+                <div class="manual-review"><label for="override-team">Corrigir destino antes de aprovar</label><select id="override-team"></select><small>A decisão final é sempre do operador.</small></div>
+                <div class="result-actions"><button type="button" class="btn approve-btn" id="approve-btn">✓ Aprovar destino sugerido</button><button type="button" class="btn reject-btn" id="reject-btn">Rejeitar</button></div>
+                <button type="button" class="json-toggle" id="json-toggle" aria-expanded="false">Visualizar payload JSON <span>⌄</span></button><pre id="json-output" hidden></pre>
+              </div>
+              <div class="result-footnote">*Índice relativo entre cinco áreas, não uma probabilidade calibrada. Nenhum chamado é transmitido ou encaminhado a sistemas externos.</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="solicitacoes" aria-labelledby="queue-heading">
+          <div class="section-heading"><div><div class="eyebrow">02 — OPERATIONS CENTER</div><h2 id="queue-heading">Fila operacional <span class="heading-accent">↗</span></h2><p>Um registro transparente de cada análise, sugestão e decisão humana.</p></div><button type="button" class="btn outline-btn" id="export-btn"><span>↓</span> Exportar CSV</button></div>
+          <div class="panel table-panel"><div class="table-toolbar"><div class="filter-list" role="group" aria-label="Filtrar solicitações"><button type="button" class="filter active" data-filter="todas">Todas <span id="tab-count-all">0</span></button><button type="button" class="filter" data-filter="pendente">Pendentes</button><button type="button" class="filter" data-filter="aprovada">Aprovadas</button><button type="button" class="filter" data-filter="rejeitada">Rejeitadas</button></div><label class="search-box"><span>⌕</span><span class="sr-only">Buscar solicitações</span><input id="queue-search" placeholder="Buscar solicitação..." /></label></div><div class="table-scroll"><table><thead><tr><th>IDENTIFICADOR</th><th>SOLICITAÇÃO</th><th>ÁREA SUGERIDA</th><th>PRIORIDADE</th><th>STATUS</th><th>AÇÃO</th></tr></thead><tbody id="queue-body"></tbody></table></div><div class="table-bottom"><span id="queue-summary">Mostrando 0 registros</span><button type="button" id="reset-demo" class="text-btn">↺ Restaurar dados de demonstração</button></div></div>
+        </section>
+
+        <section class="section" id="insights" aria-labelledby="insights-heading">
+          <div class="section-heading"><div><div class="eyebrow">03 — OPERATIONAL INTELLIGENCE</div><h2 id="insights-heading">Visibilidade para decidir <span class="heading-accent">↗</span></h2><p>Indicadores calculados a partir das solicitações fictícias deste navegador.</p></div><span class="section-tag">DADOS DE DEMONSTRAÇÃO</span></div>
+          <div class="insights-grid"><article class="panel chart-panel"><div class="chart-head"><div><h3>Distribuição por área</h3><p>Solicitações classificadas por destino sugerido</p></div><span class="chart-mark">◫</span></div><div id="category-chart" class="bar-chart"></div><div class="chart-footer"><span><i></i> Volume de solicitações</span><span>5 áreas</span></div></article><article class="panel governance-panel"><div class="chart-head"><div><h3>Governança do fluxo</h3><p>Controle humano em cada etapa</p></div><span class="chart-mark">◎</span></div><div class="governance-visual"><div class="governance-ring"><div><strong id="review-rate">0%</strong><small>decisões revisadas</small></div></div><div class="governance-legend"><div><span class="legend-dot approved"></span><span>Aprovadas</span><strong id="legend-approved">0</strong></div><div><span class="legend-dot pending"></span><span>Aguardando</span><strong id="legend-pending">0</strong></div><div><span class="legend-dot rejected"></span><span>Rejeitadas</span><strong id="legend-rejected">0</strong></div></div></div><div class="governance-footer">Nenhuma decisão é executada automaticamente sem validação.</div></article></div>
+        </section>
+
+        <section class="section" id="arquitetura" aria-labelledby="arch-heading"><div class="section-heading"><div><div class="eyebrow">04 — SYSTEM DESIGN</div><h2 id="arch-heading">Como funciona <span class="heading-accent">↗</span></h2><p>Uma arquitetura pequena, auditável e intencionalmente transparente.</p></div></div><div class="architecture-grid"><article class="architecture-step"><div class="step-num">01</div><div class="step-icon">⌁</div><h3>Entrada estruturada</h3><p>O operador fornece título, contexto e urgência. Dados de exemplo são inteiramente fictícios.</p></article><article class="architecture-step"><div class="step-num">02</div><div class="step-icon">✳</div><h3>Modelo de classificação</h3><p>Um Naive Bayes multinomial, treinado em exemplos sintéticos, sugere a categoria e calcula um índice relativo.</p></article><article class="architecture-step"><div class="step-num">03</div><div class="step-icon">↗</div><h3>Regras de roteamento</h3><p>O modelo sugere a área, enquanto a prioridade segue regras explícitas e independentes da IA.</p></article><article class="architecture-step"><div class="step-num">04</div><div class="step-icon">✓</div><h3>Revisão humana</h3><p>O operador aprova, rejeita ou corrige a sugestão. O registro fica apenas neste navegador.</p></article></div><div class="architecture-note"><div class="note-icon">i</div><div><strong>Transparência sobre o papel da IA</strong><p>Esta versão contém um classificador estatístico real executado localmente. Não utiliza um LLM nem envia solicitações a uma API externa. Uma integração com IA generativa é uma evolução planejada, não uma funcionalidade existente.</p></div></div></section>
+
+        <section class="about-section" id="sobre"><div class="about-intro"><span class="eyebrow">PROJETO INDEPENDENTE DE PORTFÓLIO</span><h2>Construído para demonstrar<br /><em>ideias em funcionamento.</em></h2><p>FlowPilot AI é um laboratório independente de automação inteligente idealizado para explorar triagem operacional, classificação estatística, revisão humana e experiência de uso. Todos os cenários e dados são fictícios; o projeto não representa nenhum cliente, empregador ou processo corporativo real.</p><div class="tech-tags"><span>JavaScript</span><span>Machine Learning</span><span>Naive Bayes</span><span>Human-in-the-loop</span><span>UX / UI</span><span>Data Analytics</span></div><a class="author-link" href="https://www.linkedin.com/in/dougllaspaiva/" target="_blank" rel="noopener noreferrer">Conhecer o perfil de Douglas no LinkedIn ↗</a></div><div class="author-card"><div class="author-initials">DP</div><span class="micro-label">AUTOR DO PROJETO</span><strong>Douglas Paiva</strong><p>BI & Data Analyst<br />SAS Viya · SQL · Python · Power BI</p><div class="author-rule"></div><span class="portfolio-label">PORTFOLIO / 2026 <span>↗</span></span></div></section>
+      </main>
+      <footer class="footer"><span>© 2026 FlowPilot AI · Douglas Paiva</span><span>PROJETO INDEPENDENTE · DADOS SINTÉTICOS · AMBIENTE DE DEMONSTRAÇÃO</span></footer>
+    </div>
+  </div>
+  <dialog id="detail-dialog" class="detail-dialog"><div class="dialog-head"><div><span class="eyebrow">REGISTRO DA SOLICITAÇÃO</span><h3 id="dialog-title">Detalhes</h3></div><button type="button" id="dialog-close" class="dialog-close" aria-label="Fechar detalhes">×</button></div><div id="dialog-content"></div><div class="dialog-footer"><button type="button" id="dialog-dismiss" class="btn outline-btn">Fechar</button></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
